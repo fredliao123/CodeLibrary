@@ -1,0 +1,53 @@
+<!--html <img> <a>标签基础功能-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>图像和超链接</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+    <!-- <img> src image source
+         alt alternation; the alternation to show when the image is loading or can't be shown
+         height 50px|20%
+         width -->
+    <!-- 绝对路径-->
+    <h2>绝对路径</h2>
+    <img src="D:/img/html.jpg" alt="alternation of image" />
+    <br/>
+    <!-- 相对路径 ../表示上一级-->
+    <h2>相对路径1</h2>
+    <img src="../1.jpg" alt="alternation of image" />
+    <br/>
+    <!-- 相对路径 在包含html的文件夹下的image文件夹 -->
+    <h2>相对路径2</h2>
+    <img src="img/html.jpg" alt="alternation of image" />
+    <br/>
+    <!--Links
+      <a href=""
+         target="_self|_blank|_top|_parent" By default the link will open a page in the same window(_self); _blank open in a new window
+         title hint text for link
+         name>
+    -->
+    <a href="http://www.yiminjiayuan.com/thread-275314-1-1.html" target="_blank"><h2>外链超链接跳转</h2></a>
+    <br/>
+    <a href="link/html2.html" target="_top" title="title" name="name"><h2>本地跳转</h2></a>
+    <br/>
+    <a href="#"><h2>空连接</h2></a>
+    <br/>
+    <a href="目录式跳转.html" target="_top" title="title" name="name"><h2>目录式跳转</h2></a>
+    <br/>
+    <!-- 不同目录的跳转文件名#锚名 -->
+    <a href="目录式跳转.html#js1"><h2>不同页面锚点跳转</h2></a>
+    <br/>
+    <!-- 邮件地址之前添加mailto -->
+    <a href="mailto:724430854@qq.com"><h2>邮件链接</h2></a>
+    <br/>
+    <!-- 文件下载，文件路径 -->
+    <a href="img.zip"><h2>文件下载</h2></a>
+
+    
+</body>
+
+</html>

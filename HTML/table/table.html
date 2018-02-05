@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>表格</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+    <!--创建2行3列表格
+         <table> 
+            border表格边框的宽度 px, 
+            width宽度 px|%
+            align=left|center|right 元素对齐方式
+            Bgcolor 背景颜色
+            cellpadding 单元边沿与其内容之间的空白 px|%
+            cellspacing 单元格之间的空白 px|%
+            frame 规定外边框可见性 void|above|blow|hsides|vsides|lhs|rhs|box|border|
+            rules 内边框可见性 none|groups|rows|cols|all
+         -->
+    <table border="2px" width="500px" cellpadding="0px" cellspacing="0px" align="center">
+        <!-- 表格标题 -->
+        <caption>平均工资</caption>
+        <!-- 
+         <tr> table role
+         align 水平对齐
+         valign 垂直对齐
+         bgcolor 背景颜色
+
+         <td> 单元格
+         <th> 居中加粗的单元格
+         align, valign, bgcolor,width, height
+         colspan="2" 行跨列
+         rowspan="2" 列跨行
+
+         <thead> 表头结构，用于分布加载表格
+         <tbody> 表格数据主体
+         <tfoot> 表格脚注
+         align, valign -->
+        <thead>
+        <tr bgcolor="f2f2f2">
+            <th rowspan="2">城市</th> <!-- 这个单元格占两行，所以要把下一行相对应位置删除 -->
+            <th colspan="2">2014年</th> <!-- 这个单元格占两列，所以就需要少一列 -->
+            <th rowspan="2">2015年</th>
+            <th rowspan="2">2016年</th>
+        </tr>
+        <tr bgcolor="f2f2f2">
+            <th>上半年</th>
+            <th>下半年</th>
+        </tr>
+        </thead>
+        <tbody align="center" valign="middle">
+        <tr>
+            <td bgcolor="#b8cce4" >北京</td>
+            <td>8000</td>
+            <td>9000</td>
+            <td>10000</td>
+            <td>12000</td>
+        </tr>
+        <tr>
+            <td bgcolor="#b8cce4">上海</td>
+            <td>8000</td>
+            <td>9000</td>
+            <td>10000</td>
+            <td>12000</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr align="center" valign="middle">
+            <td bgcolor="#b8cce4" align="center" valign="middle">广州</td>
+            <td>8000</td>
+            <td>9000</td>
+            <td>10000</td>
+            <td>12000</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

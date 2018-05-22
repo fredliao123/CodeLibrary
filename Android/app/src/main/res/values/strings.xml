@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CodeLibrary</string>
+    <string name="recycler_view">RecyclerView</string>
+</resources>

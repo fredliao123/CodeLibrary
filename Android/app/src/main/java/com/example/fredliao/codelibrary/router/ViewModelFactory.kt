@@ -4,6 +4,7 @@ import android.app.Application
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import android.content.Intent
+import com.example.fredliao.codelibrary.numberpicker.NumberPickerViewModel
 import com.example.fredliao.codelibrary.recyclerview.RecyclerViewModel
 
 class ViewModelFactory(private val application: Application, private val intent: Intent) : ViewModelProvider.Factory {
@@ -13,6 +14,8 @@ class ViewModelFactory(private val application: Application, private val intent:
         return when {
             modelCls.isAssignableFrom(RecyclerViewModel::class.java) ->
                 RecyclerViewModel()
+            modelCls.isAssignableFrom(NumberPickerViewModel::class.java) ->
+                NumberPickerViewModel()
 
             else ->
                 throw IllegalArgumentException("Unknow ViewModel class" + modelCls)

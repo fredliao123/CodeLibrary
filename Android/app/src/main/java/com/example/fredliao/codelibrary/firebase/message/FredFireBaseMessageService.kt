@@ -15,11 +15,7 @@ class FredFirebaseMessagingService : FirebaseMessagingService() {
 
         message?.data?.let {
             //This is where we deal with different message
-            if (it["type"] == "shift") {
-                notifyMessage(this, it["id"] ?: "")
-            } else if (it["type"] == "outstanding-review") {
-                notifyMessage(this, it["links.new-review"] ?: "")
-            }
+
         }
     }
 }

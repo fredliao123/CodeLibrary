@@ -11,7 +11,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.acitvity_main)
     }
 
-    fun jumpToRecyclerViewActivity(v: View) {
+    fun jumpToRecyclerViewActivity(v : View) {
         startActivity(MasterRouter.startRecyclerViewActivity(this))
+    }
+
+    fun jumpToNumberPickerActivity(v : View) {
+        startActivity(MasterRouter.startNumberPickerActivity(this))
     }
 }

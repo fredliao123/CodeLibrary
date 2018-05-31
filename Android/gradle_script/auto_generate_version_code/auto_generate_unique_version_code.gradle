@@ -1,0 +1,23 @@
+android {
+    def versionPropsFile = file('version.properties')
+    def version_name
+
+    if (versionPropsFile.canRead()) {
+        Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropsFile))
+        version_name = versionProps['VERSION']
+    } else {
+        throw new FileNotFoundException("Could not read version.properties!")
+    }
+
+    defaultConfig {
+        applicationId "com.suppapp"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionName version_name
+        versionCode buildVersionCode()
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        buildConfigField "boolean", "SHOW_QUICK_LOGIN_MENUS", "false"
+    }
+}

@@ -1,0 +1,60 @@
+android {
+    def versionPropsFile = file('version.properties')
+    def versionBuild
+    def version_code
+
+    if (versionPropsFile.canRead()) {
+        Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropsFile))
+        versionBuild = versionProps['VERSION_BUILD'].toInteger()
+        version_code = versionProps['VERSION_CODE'].toInteger()
+    } else {
+        throw new FileNotFoundException("Could not read version.properties!")
+    }
+
+    ext.autoIncrementCodeNumber = {
+
+        if (versionPropsFile.canRead()) {
+            Properties versionProps = new Properties()
+            versionProps.load(new FileInputStream(versionPropsFile))
+            version_code = versionProps['VERSION_CODE'].toInteger() + 1
+            versionProps['VERSION_CODE'] = version_code.toString()
+            versionProps.store(versionPropsFile.newWriter(), null)
+        } else {
+            throw new FileNotFoundException("Could not read version.properties!")
+        }
+    }
+
+    ext.autoIncrementBuildNumber = {
+
+        if (versionPropsFile.canRead()) {
+            Properties versionProps = new Properties()
+            versionProps.load(new FileInputStream(versionPropsFile))
+            versionBuild = versionProps['VERSION_BUILD'].toInteger() + 1
+            versionProps['VERSION_BUILD'] = versionBuild.toString()
+            versionProps.store(versionPropsFile.newWriter(), null)
+        } else {
+            throw new FileNotFoundException("Could not read version.properties!")
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.suppapp"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionName "1.0.0 " + versionBuild
+        versionCode version_code
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        buildConfigField "boolean", "SHOW_QUICK_LOGIN_MENUS", "false"
+    }
+
+    gradle.taskGraph.whenReady { taskGraph ->
+        if (taskGraph.hasTask(tasks.findByName("assembleDebug"))) {  /* when run debug task */
+            autoIncrementBuildNumber()
+        }
+        if (taskGraph.hasTask(tasks.findByName("assembleRelease"))) {
+            autoIncrementCodeNumber()
+        }
+    }
+}

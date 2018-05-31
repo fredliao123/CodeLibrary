@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.example.fredliao.codelibrary.edittext.PrefixSuffixEditTextViewModel"
+        />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/minimum_rate_wrapper_horizontal_margin"
+        android:layout_marginRight="@dimen/minimum_rate_wrapper_horizontal_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/minimumrate_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minimumrate_header"
+            android:textColor="@{model.minimumRateFocused ? @color/colorAccent : @color/text_input_layout_header_color}"
+            android:textSize="@dimen/minimum_rate_header_textsize" />
+
+        <LinearLayout
+            android:id="@+id/minimumrate_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="minimumRateWrapperClicked"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/minimumrate_dollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minimumrate_dollar"
+                android:textColor="?attr/editTextColor"
+                android:textSize="@dimen/minimum_rate_suffix_prefix_textsize"
+                android:visibility="@{model.rateEmpty ? View.GONE : View.VISIBLE}" />
+
+            <EditText
+                android:id="@+id/minimumrate_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorWhiteBackground"
+                android:gravity="left"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/minimum_rate_edit_text_bottom_margin"
+                android:paddingTop="@dimen/minimum_rate_edit_text_top_margin"
+                android:text="@={model.minimumRate}" />
+
+            <TextView
+                android:id="@+id/minimumrate_per_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minimumrate_per_hour"
+                android:textColor="?attr/editTextColor"
+                android:textSize="@dimen/minimum_rate_suffix_prefix_textsize"
+                android:visibility="@{model.rateEmpty ? View.GONE : View.VISIBLE}" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@{model.minimumRateFocused ? @color/colorAccent : @color/Grey1}" />
+
+    </LinearLayout>
+</layout>

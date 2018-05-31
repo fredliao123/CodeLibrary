@@ -1,0 +1,13 @@
+/**
+ * Follow the set up guide here:https://github.com/Triple-T/gradle-play-publisher
+ */
+android{
+    play {
+        jsonFile = file('Google Play Android Developer-0b85c6ea1e4b.json')
+        //If we want to change the track use command line, use this line.
+        //Then add a default track in local gradle.property
+        //Use this command line: ./gradlew publishApkProductionRelease -Dorg.gradle.project.track=beta
+        track = project.properties['track']
+        untrackOld = true
+    }
+}

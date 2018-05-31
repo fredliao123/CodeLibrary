@@ -18,4 +18,8 @@ class MainActivity : AppCompatActivity() {
     fun jumpToNumberPickerActivity(v : View) {
         startActivity(MasterRouter.startNumberPickerActivity(this))
     }
+
+    fun jumpToPrefixSuffixEditText(v : View) {
+        startActivity(MasterRouter.startPrefixSuffixEditTextActivity(this))
+    }
 }

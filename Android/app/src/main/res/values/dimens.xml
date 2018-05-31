@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="minimum_rate_suffix_prefix_textsize">18sp</dimen>
+    <dimen name="minimum_rate_header_textsize">12sp</dimen>
+    <dimen name="minimum_rate_wrapper_horizontal_margin">3dp</dimen>
+    <dimen name="minimum_rate_edit_text_height">18dp</dimen>
+    <dimen name="minimum_rate_edit_text_top_margin">8dp</dimen>
+    <dimen name="minimum_rate_edit_text_bottom_margin">3dp</dimen>
+
+</resources>

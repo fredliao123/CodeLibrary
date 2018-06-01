@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CodeLibrary</string>
+    <string name="recycler_view">RecyclerView</string>
+    <string name="number_picker">Number Picker</string>
+    <string name="prefix_suffix_edit_text">Prefix Suffix Edit Text</string>
+
+    <string name="number_picker_title">Number Picker</string>
+    <string name="submit">Submit</string>
+    <string name="number_picker_set_suffix">$%s p/h</string>
+
+    <string name="minimumrate_dollar">$</string>
+    <string name="minimumrate_header">Minimum Rate</string>
+    <string name="minimumrate_per_hour"> p/h</string>
+</resources>

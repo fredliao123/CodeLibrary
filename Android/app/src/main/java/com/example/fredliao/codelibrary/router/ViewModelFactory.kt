@@ -4,7 +4,9 @@ import android.app.Application
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import android.content.Intent
+import com.example.fredliao.codelibrary.BaseApplication
 import com.example.fredliao.codelibrary.edittext.PrefixSuffixEditTextViewModel
+import com.example.fredliao.codelibrary.login.LoginViewModel
 import com.example.fredliao.codelibrary.numberpicker.NumberPickerViewModel
 import com.example.fredliao.codelibrary.recyclerview.RecyclerViewModel
 
@@ -19,6 +21,9 @@ class ViewModelFactory(private val application: Application, private val intent:
                 NumberPickerViewModel()
             modelCls.isAssignableFrom(PrefixSuffixEditTextViewModel::class.java) ->
                 PrefixSuffixEditTextViewModel()
+            modelCls.isAssignableFrom(LoginViewModel::class.java) ->
+                LoginViewModel((application as BaseApplication).serviceContainer.codeLibRepository)
+
 
             else ->
                 throw IllegalArgumentException("Unknow ViewModel class" + modelCls)

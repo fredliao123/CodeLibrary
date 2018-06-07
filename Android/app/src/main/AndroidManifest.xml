@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fredliao.codelibrary">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".BaseApplication"
         android:allowBackup="true"
@@ -48,6 +50,8 @@
         <activity android:name=".numberpicker.NumberPickerActivity"/>
 
         <activity android:name=".edittext.PrefixSuffixEditTextActivity"/>
+
+        <activity android:name=".login.LoginActivity"/>
 
     </application>
 </manifest>

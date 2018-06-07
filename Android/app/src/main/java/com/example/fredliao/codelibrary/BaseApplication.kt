@@ -4,6 +4,9 @@ import android.app.Application
 import timber.log.Timber
 
 class BaseApplication : Application() {
+
+    lateinit var serviceContainer: ServiceContainer
+
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG) {
@@ -11,7 +14,6 @@ class BaseApplication : Application() {
         } else {
 
         }
-
-
+        serviceContainer = ServiceContainer(this)
     }
 }

@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import com.example.fredliao.codelibrary.camera.CameraActivity
 import com.example.fredliao.codelibrary.edittext.PrefixSuffixEditTextActivity
-import com.example.fredliao.codelibrary.edittext.PrefixSuffixEditTextViewModel
+import com.example.fredliao.codelibrary.login.LoginActivity
 import com.example.fredliao.codelibrary.numberpicker.NumberPickerActivity
 import com.example.fredliao.codelibrary.recyclerview.RecyclerViewActivity
 
@@ -35,6 +35,10 @@ object MasterRouter {
     fun startPrefixSuffixEditTextActivity(context: Context): Intent {
         val intent = Intent(context, PrefixSuffixEditTextActivity::class.java)
         return intent
+    }
+
+    fun startLoginActivity(context: Context): Intent {
+        return Intent(context, LoginActivity::class.java)
     }
 
 }

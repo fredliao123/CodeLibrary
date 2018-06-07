@@ -63,8 +63,11 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-moshi:2.3.0'
     // for JsonApi (de)serialisation
     implementation 'moe.banana:moshi-jsonapi:3.5.0'
+    // for JsonApiConverterFactory
+    implementation 'moe.banana:moshi-jsonapi-retrofit-converter:3.5.0'
     // Need for Date adapter for Moshi
     implementation 'com.squareup.moshi:moshi-adapters:1.4.0'
+
     //-------Network ended--------
 
     // make life easier for Databinding RecyclerViews

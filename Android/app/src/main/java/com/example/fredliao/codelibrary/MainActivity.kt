@@ -22,4 +22,8 @@ class MainActivity : AppCompatActivity() {
     fun jumpToPrefixSuffixEditText(v : View) {
         startActivity(MasterRouter.startPrefixSuffixEditTextActivity(this))
     }
+
+    fun jumpToLoginAcitivity(v : View) {
+        startActivity(MasterRouter.startLoginActivity(this))
+    }
 }

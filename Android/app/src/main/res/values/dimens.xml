@@ -8,4 +8,12 @@
     <dimen name="minimum_rate_edit_text_top_margin">8dp</dimen>
     <dimen name="minimum_rate_edit_text_bottom_margin">3dp</dimen>
 
+    <dimen name="xxlarge_margin">64dp</dimen>
+    <dimen name="xlarge_margin">32dp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="large_margin_for_spinner">20dp</dimen>
+    <dimen name="standard_margin">8dp</dimen>
+    <dimen name="very_small_margin">2dp</dimen>
+    <dimen name="small_margin">4dp</dimen>
+
 </resources>

@@ -7,15 +7,14 @@ import com.example.fredliao.codelibrary.edittext.PrefixSuffixEditTextActivity
 import com.example.fredliao.codelibrary.login.LoginActivity
 import com.example.fredliao.codelibrary.numberpicker.NumberPickerActivity
 import com.example.fredliao.codelibrary.recyclerview.RecyclerViewActivity
+import com.example.fredliao.codelibrary.spinner.SpinnerActivity
 
 /*
 object class this a simple singleton in kotlin
  */
 object MasterRouter {
 
-    enum class Extras {
-
-    }
+    enum class Extras
 
     fun startCameraActivity(context: Context): Intent {
         val intent = Intent(context, CameraActivity::class.java)
@@ -41,4 +40,7 @@ object MasterRouter {
         return Intent(context, LoginActivity::class.java)
     }
 
+    fun startSpinnerActivity(context: Context): Intent {
+        return Intent(context, SpinnerActivity::class.java)
+    }
 }

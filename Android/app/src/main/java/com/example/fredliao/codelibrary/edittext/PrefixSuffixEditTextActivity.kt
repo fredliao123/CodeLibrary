@@ -42,31 +42,28 @@ class PrefixSuffixEditTextActivity : BaseActivity<PrefixSuffixEditTextViewModel>
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
-
         })
         minimumrate_edittext.setOnFocusChangeListener { _, b ->
             viewModel.minimumRateFocused = b
         }
     }
 
-
     fun minimumRateWrapperClicked(v: View) {
-        //Request focus explicitly for minimumRate's Edittext
+        // Request focus explicitly for minimumRate's Edittext
         minimumrate_edittext.requestFocus()
-        //Move the cursor to the end of text
+        // Move the cursor to the end of text
         minimumrate_edittext.setSelection(minimumrate_edittext.text.length)
-        //Show soft keyboard.
+        // Show soft keyboard.
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.showSoftInput(minimumrate_edittext, InputMethodManager.SHOW_IMPLICIT)
     }
-
 
     /**
      * way to hide soft key board
      */
     private fun hideSoftKeyboard() {
         val inputMethodManager: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        //Any widget's window token will be fine
+        // Any widget's window token will be fine
         inputMethodManager.hideSoftInputFromWindow(binding.minimumrateEdittext.windowToken, 0)
     }
 }

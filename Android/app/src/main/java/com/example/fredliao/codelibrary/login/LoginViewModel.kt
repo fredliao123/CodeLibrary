@@ -1,11 +1,11 @@
 package com.example.fredliao.codelibrary.login
 
 import android.databinding.Bindable
+import com.example.fredliao.codelibrary.BR
 import com.example.fredliao.codelibrary.common.BaseViewModel
 import com.example.fredliao.codelibrary.model.MagicResponse
 import com.example.fredliao.codelibrary.model.User
 import com.example.fredliao.codelibrary.network.data.CodeLibRepository
-import com.example.fredliao.codelibrary.BR
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -39,5 +39,4 @@ class LoginViewModel(private val codeLibRepository: CodeLibRepository) : BaseVie
     private fun updateUser(user: User) {
         this.user = user
     }
-
 }

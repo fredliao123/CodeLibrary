@@ -39,7 +39,7 @@
         </service>
 
         //Required by firebase messaging
-        <service android:name="com.example.fredliao.codelibrary.firebase.message.SuppFirebaseInstanceIDService">
+        <service android:name="com.example.fredliao.codelibrary.firebase.message.FredFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -47,11 +47,13 @@
 
         <activity android:name=".recyclerview.RecyclerViewActivity" />
 
-        <activity android:name=".numberpicker.NumberPickerActivity"/>
+        <activity android:name=".numberpicker.NumberPickerActivity" />
 
-        <activity android:name=".edittext.PrefixSuffixEditTextActivity"/>
+        <activity android:name=".edittext.PrefixSuffixEditTextActivity" />
 
-        <activity android:name=".login.LoginActivity"/>
+        <activity android:name=".login.LoginActivity" />
+
+        <activity android:name=".spinner.SpinnerActivity"/>
 
     </application>
 </manifest>

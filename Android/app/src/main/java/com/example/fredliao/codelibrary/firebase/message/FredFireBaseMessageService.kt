@@ -8,14 +8,13 @@ import timber.log.Timber
  * Service to deal with Firebase Cloud Messaging push notifications while app is in
  * the foreground, etc.
  */
-class FredFirebaseMessagingService : FirebaseMessagingService() {
+class FredFireBaseMessageService : FirebaseMessagingService() {
 
     override fun onMessageReceived(message: RemoteMessage?) {
         Timber.d("Received FCM MESG DATA: %s", message?.data)
 
         message?.data?.let {
-            //This is where we deal with different message
-
+            // This is where we deal with different message
         }
     }
 }

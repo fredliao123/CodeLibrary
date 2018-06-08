@@ -7,7 +7,7 @@ import com.example.fredliao.codelibrary.common.BaseViewModel
 /**
  * Remember to implement PickerInterfaceViewModel
  */
-class NumberPickerViewModel : BaseViewModel(), PickerInterfaceViewModel{
+class NumberPickerViewModel : BaseViewModel(), PickerInterfaceViewModel {
 
     override var numberPickerValue: Int = 22
         @Bindable
@@ -17,5 +17,4 @@ class NumberPickerViewModel : BaseViewModel(), PickerInterfaceViewModel{
             field = value
             notifyPropertyChanged(BR.numberPickerValue)
         }
-
 }

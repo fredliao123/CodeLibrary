@@ -9,6 +9,7 @@ import com.example.fredliao.codelibrary.edittext.PrefixSuffixEditTextViewModel
 import com.example.fredliao.codelibrary.login.LoginViewModel
 import com.example.fredliao.codelibrary.numberpicker.NumberPickerViewModel
 import com.example.fredliao.codelibrary.recyclerview.RecyclerViewModel
+import com.example.fredliao.codelibrary.spinner.SpinnerViewModel
 
 class ViewModelFactory(private val application: Application, private val intent: Intent) : ViewModelProvider.Factory {
 
@@ -23,11 +24,11 @@ class ViewModelFactory(private val application: Application, private val intent:
                 PrefixSuffixEditTextViewModel()
             modelCls.isAssignableFrom(LoginViewModel::class.java) ->
                 LoginViewModel((application as BaseApplication).serviceContainer.codeLibRepository)
-
+            modelCls.isAssignableFrom(SpinnerViewModel::class.java) ->
+                SpinnerViewModel((application as BaseApplication).serviceContainer.codeLibRepository)
 
             else ->
                 throw IllegalArgumentException("Unknow ViewModel class" + modelCls)
         } as T
     }
-
 }

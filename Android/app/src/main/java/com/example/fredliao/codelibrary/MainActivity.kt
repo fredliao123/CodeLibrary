@@ -11,19 +11,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.acitvity_main)
     }
 
-    fun jumpToRecyclerViewActivity(v : View) {
+    fun jumpToRecyclerViewActivity(v: View) {
         startActivity(MasterRouter.startRecyclerViewActivity(this))
     }
 
-    fun jumpToNumberPickerActivity(v : View) {
+    fun jumpToNumberPickerActivity(v: View) {
         startActivity(MasterRouter.startNumberPickerActivity(this))
     }
 
-    fun jumpToPrefixSuffixEditText(v : View) {
+    fun jumpToPrefixSuffixEditText(v: View) {
         startActivity(MasterRouter.startPrefixSuffixEditTextActivity(this))
     }
 
-    fun jumpToLoginAcitivity(v : View) {
+    fun jumpToLoginAcitivity(v: View) {
         startActivity(MasterRouter.startLoginActivity(this))
+    }
+
+    fun jumpToSpinnerActivity(v: View) {
+        startActivity(MasterRouter.startSpinnerActivity(this))
     }
 }

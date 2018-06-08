@@ -7,5 +7,4 @@ package com.example.fredliao.codelibrary.numberpicker
 interface PickerInterfaceViewModel {
 
     var numberPickerValue: Int
-
 }

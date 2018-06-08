@@ -8,5 +8,4 @@ class RecyclerItemViewModel(val recyclerItem: RecyclerItem) : BaseViewModel() {
     val title: String
         @Bindable
         get() = recyclerItem.title
-
 }

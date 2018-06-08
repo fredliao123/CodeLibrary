@@ -37,6 +37,4 @@ open class BaseViewModel : ViewModel(), Observable {
     fun notifyPropertyChanged(fieldId: Int) {
         _callbacks.notifyCallbacks(this, fieldId, null)
     }
-
-
 }

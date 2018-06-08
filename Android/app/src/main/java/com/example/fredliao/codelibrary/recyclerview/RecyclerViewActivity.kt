@@ -41,7 +41,5 @@ class RecyclerViewActivity : BaseActivity<RecyclerViewModel>() {
     }
 
     private fun itemClicked(item: RecyclerItemViewModel) {
-
     }
-
 }

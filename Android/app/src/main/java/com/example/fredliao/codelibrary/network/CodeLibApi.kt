@@ -11,7 +11,7 @@ import retrofit2.http.Path
 
 interface CodeLibApi {
     @GET("users/{id}")
-    fun getUser(@Path("id") id: String) : Observable<User>
+    fun getUser(@Path("id") id: String): Observable<User>
 
     @POST("auth/magic_tokens")
     fun loginMagicToken(@Body data: MagicRequest): Observable<MagicResponse>

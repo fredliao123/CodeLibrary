@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.example.fredliao.codelibrary.numberpicker.NumberPickerViewModel"/>
+            type="com.example.fredliao.codelibrary.numberpicker.NumberPickerViewModel" />
 
     </data>
 
@@ -31,8 +32,7 @@
                 android:maxLines="1"
                 android:hint="Number Picker with Edit Text"
                 android:onClick="showNumberPicker"
-                android:text="@{@string/number_picker_set_suffix(viewModel.numberPickerValue)}"
-                />
+                android:text="@{@string/number_picker_set_suffix(viewModel.numberPickerValue)}" />
 
         </android.support.design.widget.TextInputLayout>
 

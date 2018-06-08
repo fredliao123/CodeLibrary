@@ -10,7 +10,7 @@ import com.example.fredliao.codelibrary.router.ViewModelFactory
 
 class LoginActivity : BaseActivity<LoginViewModel>() {
 
-    val binding : ActivityLoginBinding by lazy {
+    val binding: ActivityLoginBinding by lazy {
         DataBindingUtil.setContentView<ActivityLoginBinding>(this, R.layout.activity_login)
     }
 
@@ -19,10 +19,9 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
         binding.viewModel = setupViewModel()
     }
 
-    private fun setupViewModel() : LoginViewModel {
+    private fun setupViewModel(): LoginViewModel {
         val factory = ViewModelFactory(application, intent)
         viewModel = ViewModelProviders.of(this, factory).get(LoginViewModel::class.java)
         return viewModel
     }
-
 }

@@ -7,8 +7,7 @@
 
         <variable
             name="model"
-            type="com.example.fredliao.codelibrary.edittext.PrefixSuffixEditTextViewModel"
-        />
+            type="com.example.fredliao.codelibrary.edittext.PrefixSuffixEditTextViewModel" />
 
     </data>
 
